@@ -2,6 +2,8 @@ import PostHeader from "./post-header";
 import classes from './post-content.module.css'
 import ReactMarkdown from 'react-markdown'
 import Image from "next/image";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 function PostContent(props) {
     const { post } = props
@@ -38,9 +40,23 @@ function PostContent(props) {
       }
 
     return <p>{paragraph.children}</p>
-  }
-  
-    };
+  },
+
+ code(code) {
+  const { className, children } = code;
+  // Extracts "js" from "language-js"
+  const language = className ? className.replace('language-', '') : '';
+
+  return (
+    <SyntaxHighlighter
+      style={atomDark}
+      language={language}
+    >
+      {String(children).trim()}
+    </SyntaxHighlighter>
+  );
+}
+};
 
     return(
         <article className={classes.content}>
