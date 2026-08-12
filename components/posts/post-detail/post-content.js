@@ -44,7 +44,7 @@ function PostContent(props) {
 
  code(code) {
   const { className, children } = code;
-  // Extracts "js" from "language-js"
+
   const language = className ? className.replace('language-', '') : '';
 
   return (
