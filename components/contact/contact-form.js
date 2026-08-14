@@ -74,13 +74,14 @@ function ContactForm() {
         }
     }
 
-    if(requestStatus === 'error'){
-        notification = {
-            status: 'error',
-            title: 'Error!',
-            message: requestError
-        }
-    }
+    if (requestStatus === 'error') {
+    notification = {
+      status: 'error',
+      title: 'Error!',
+      message: requestError,
+    };
+  }
+
 
     return(
         <section className={classes.contact}>
