@@ -6,7 +6,7 @@ module.exports = (phase) => {
             env: {
                 mongodb_username: 'antoninaparulava_db_user',
                 mongodb_password: 'La6rKaKJpCC7Zyr', 
-                mongodb_clustername: 'Cluster0',
+                mongodb_clustername: 'cluster0',
                 mongodb_database: 'my-site-dev'
             }, 
         };
@@ -16,7 +16,7 @@ module.exports = (phase) => {
     env: {
         mongodb_username: 'antoninaparulava_db_user',
         mongodb_password: 'La6rKaKJpCC7Zyr', 
-        mongodb_clustername: 'Cluster0',
+        mongodb_clustername: 'cluster0',
         mongodb_database: 'my-site'
     }, 
     }
